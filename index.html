@@ -29,6 +29,8 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesoeet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+        <!-- Importando Vue.js -->
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
    </head>
    <body>
       <!-- header section start -->
@@ -98,7 +100,55 @@
          <!-- banner section end --> 
       </div>
       <!-- header section end --> 
+      <div id="app">
+          <!-- Destaque -->
+    <section id="destaque">
+      <h2>Artigos em Destaque</h2>
+      <div class="carousel">
+        <div v-for="artigo in artigosDestaque">
+          <img :src="artigo.imagem" :alt="artigo.titulo">
+          <h3>{{ artigo.titulo }}</h3>
+          <p>{{ artigo.descricao }}</p>
+          <a :href="artigo.link">Leia mais</a>
+        </div>
+      </div>
+    </section>
 
+    <!-- Categorias -->
+    <section id="categorias">
+      <h2>Categorias</h2>
+      <ul>
+        <li v-for="categoria in categorias">
+          <img :src="categoria.icone" :alt="categoria.nome">
+          <a :href="categoria.link">{{ categoria.nome }}</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Artigos em destaque -->
+    <section id="artigos-em-destaque">
+      <h2>Artigos em Destaque</h2>
+      <ul>
+        <li v-for="artigo in artigos">
+          <img :src="artigo.imagem" :alt="artigo.titulo">
+          <h3>{{ artigo.titulo }}</h3>
+          <p>{{ artigo.descricao }}</p>
+          <a :href="artigo.link">Leia mais</a>
+        </li>
+      </ul>
+      <button @click="carregarMais">Carregar mais</button>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="newsletter">
+      <h2>Assine nossa Newsletter</h2>
+      <form @submit.prevent="submitForm">
+        <input type="email" v-model="email" placeholder="Digite seu e-mail">
+        <button type="submit">Assinar</button>
+        <p v-if="mensagem">{{ mensagem }}</p>
+      </form>
+    </section>
+   </div>
       <!-- footer section start -->
       <div class="footer_section layout_padding">
          <div class="container">
@@ -135,5 +185,104 @@
       <!-- javascript --> 
       <script src="js/owl.carousel.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+        <!-- Javascript Vue.js -->
+  <script>
+   new Vue({
+     el: '#app',
+     data: {
+       email: '',
+       mensagem: '',
+       artigosDestaque: [
+         {
+           titulo: 'Introdução ao Fog Computing',
+           descricao: 'Saiba o que é Fog Computing e como ele pode ajudar sua empresa',
+           imagem: 'https://via.placeholder.com/400x200',
+           link: '#'
+         },
+         {
+           titulo: 'Arquitetura do Fog Computing',
+           descricao: 'Conheça a arquitetura do Fog Computing e como ela pode ser aplicada',
+           imagem: 'https://via.placeholder.com/400x200',
+           link: '#'
+         },
+         {
+           titulo: 'Segurança no Fog Computing',
+           descricao: 'Entenda os principais desafios de segurança do Fog Computing',
+           imagem: 'https://via.placeholder.com/400x200',
+           link: '#'
+         }
+       ],
+       categorias: [
+         {
+           nome: 'Computação em Nuvem',
+           icone: 'https://via.placeholder.com/100x100',
+           link: '#'
+         },
+         {
+           nome: 'Internet das Coisas',
+           icone: 'https://via.placeholder.com/100x100',
+           link: '#'
+         },
+         {
+           nome: 'Redes de Computadores',
+           icone: 'https://via.placeholder.com/100x100',
+           link: '#'
+         },
+         {
+           nome: 'Segurança da Informação',
+           icone: 'https://via.placeholder.com/100x100',
+           link: '#'
+         }
+       ],
+       artigos: [
+         {
+           titulo: 'O que é Fog Computing?',
+           descricao: 'Conheça o conceito de Fog Computing e suas aplicações',
+           imagem: 'https://via.placeholder.com/400x200',
+           link: '#'
+         },
+         {
+           titulo: 'Benefícios do Fog Computing para empresas',
+           descricao: 'Saiba como o Fog Computing pode trazer benefícios para sua empresa',
+           imagem: 'https://via.placeholder.com/400x200',
+           link: '#'
+         },
+         {
+           titulo: 'Desafios do Fog Computing',
+           descricao: 'Entenda os principais desafios do Fog Computing e como superá-los',
+           imagem: 'https://via.placeholder.com/400x200',
+           link: '#'
+         }
+       ]
+     },
+  methods: {
+    carregarMais() {
+      this.artigos.push(
+        {
+          titulo: "Benefícios do Fog Computing",
+          descricao: "Saiba quais são os principais benefícios do Fog Computing e por que ele está se tornando cada vez mais popular.",
+          imagem: "https://picsum.photos/300/200",
+          link: "#"
+        },
+        {
+          titulo: "Casos de uso do Fog Computing",
+          descricao: "Descubra quais são os principais casos de uso do Fog Computing em diferentes setores da indústria.",
+          imagem: "https://picsum.photos/300/200",
+          link: "#"
+        }
+      );
+    },
+    submitForm() {
+      if (this.email === "") {
+        this.mensagem = "Por favor, digite um e-mail válido.";
+      } else {
+        this.mensagem = "E-mail cadastrado com sucesso!";
+this.email = "";
+}
+}
+}
+});
+</script>
+   </script>
    </body>
 </html>
