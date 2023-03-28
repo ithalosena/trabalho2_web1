@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Blog</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+      <style>
+
+      body {
+         background-color: #f5f5f5;
+         color: #333;
+         transition: background-color 0.5s, color 0.5s;
+         }
+
+      #dark-mode {
+         background-color: #333;
+         color: #f5f5f5;
+         }
+
+      </style>
+   </head>
+   <body>
+    <div id="app">
+      <!-- header section start -->
+      <div class="header_section">
+         <div class="container-fluid header_main">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="logo" href="index.html"><img style='width: 80px;' src="images/logo2-removebg-preview.png"></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="oquee.html">O que é?</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="aplicacao.html">Aplicação</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="features.html">Funcionamento</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="features.html">Exemplo</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+         
+      </div>
+      <p>{{ dataAtual }}</p> 
+      <div class="about_section layout_padding">
+        <div class="like_icon "><img src="images/pexels-panumas-nikhomkhai-1148820.jpg"class="img-fluid" style="width: 100%;height: 500px;border-top: 500px;"></div>
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-8 col-sm-12">
+                  <h2 class="most_text">FOG COMPUTING <br>O QUE É?</h2>
+                  <p class="lorem_text">
+                    Fog computing é um paradigma de computação distribuída que estende a computação em nuvem até a borda da rede. Fog computing envolve o uso de dispositivos de borda, como roteadores, switches e gateways, que estão localizados mais perto do usuário final ou fonte de dados, para processar e analisar dados em tempo real.
+                    <br><br>
+                    O objetivo do fog computing é reduzir a latência e os requisitos de largura de banda da computação em nuvem, movendo algumas das tarefas de computação para a borda da rede. Ao fazer isso, o fog computing pode melhorar o desempenho e a confiabilidade de aplicativos que exigem processamento e análise de dados em tempo real, como veículos autônomos, automação industrial e cidades inteligentes.
+                    <br><br>
+                    A arquitetura de fog computing geralmente envolve uma hierarquia de dispositivos, com dispositivos de borda realizando processamento local de dados e nós de neblina de nível superior fornecendo recursos e serviços de computação adicionais. O fog computing também envolve o uso de algoritmos de aprendizado de máquina e inteligência artificial para automatizar processos de tomada de decisão na borda da rede.
+                    <br>
+                    <br>
+                    Em geral, o fog computing tem o potencial de permitir uma ampla gama de aplicativos e serviços inovadores, trazendo o poder da computação em nuvem mais perto do usuário final e da fonte de dados. <br><br>
+                    
+                    
+                    
+                    <b><h2>Aqui estão cinco diferenças entre Fog computing e Cloud computing:</h2></b>
+                    <br><br>
+                   <b>Localização:</b> Fog computing é implementado na borda da rede, enquanto a computação em nuvem é implementada em data centers remotos.
+                    <br><br>
+                   <b>Latência:</b> Fog computing é projetado para reduzir a latência, pois processa dados localmente na borda da rede, enquanto a computação em nuvem pode ter um tempo de resposta mais longo devido à latência de rede.
+                    <br><br>
+                    <b>Escalabilidade:</b> A computação em nuvem é altamente escalável, permitindo que recursos computacionais sejam provisionados rapidamente sob demanda. Em contraste, a escala de Fog computing é limitada pelas capacidades dos dispositivos de borda.
+                    <br><br>
+                    <b>Capacidade de processamento:</b> A computação em nuvem é tipicamente executada em servidores de alta potência e pode manipular grandes volumes de dados. O Fog computing é executado em dispositivos de borda que têm menos capacidade de processamento e armazenamento.
+                    <br><br>
+                    <b>Segurança:</b> A computação em nuvem geralmente oferece mais recursos de segurança em comparação com o Fog computing, devido à sua arquitetura centralizada e maior controle de acesso aos dados. No entanto, o Fog computing pode ser mais resiliente a ataques DDoS e outros ataques de rede, pois o processamento e a análise de dados ocorrem localmente na borda da rede.
+                    <br>
+                </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!-- blog section end --> 
+      <!-- footer section start -->
+      <div class="footer_section layout_padding margin_top_90">
+         <div class="container">
+            <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
+            <div class="footer_menu">
+               <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="features.html">Features</a></li>
+                  <li><a href="contact.html">contact us</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">Copyright 2022 All Right Reserved By.<a href="https://html.design"></a></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script src="./src/app.js"></script>
+   </body>
+</html>
